@@ -68,7 +68,7 @@ const [imgLoaded,setimgLoaded] = useState(false);
       
     <div className="image-container">
        
-       {imgLoaded ? images : "Loading Images"}
+       {imgLoaded ? images : <h1 style={{textAlign:"center"}}>Loading Images...</h1>}
       
     </div>)
 

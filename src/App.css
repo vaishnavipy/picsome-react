@@ -173,3 +173,6 @@ button{
 .btn-div{
   text-align: center;
 }
+#clearCart{
+  display: none;
+}

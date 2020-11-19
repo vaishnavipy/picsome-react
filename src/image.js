@@ -7,7 +7,7 @@ import {ImgContext} from "./imgContext"
 
 function Image(props){
 
-    const {cartImgUrl,handleCartImgUrl}=useContext(ImgContext)
+    const {cartImgUrl,handleCartImgUrl,removeCartImgUrl}=useContext(ImgContext)
 
     function handleClick(event){
         let iconParent;
@@ -26,13 +26,14 @@ function Image(props){
 
             iconParent =   event.target.parentElement;
             iconParent.innerHTML=`<i class="ri-shopping-cart-fill"></i>`
-            document.getElementById("main-cart").innerHTML = `<i class="ri-shopping-cart-fill"></i>`;
+           // document.getElementById("main-cart").innerHTML = `<i class="ri-shopping-cart-fill"></i>`;
             handleCartImgUrl ( iconParent.parentElement.children[0].src)
          
 
         }else{
             iconParent =   event.target.parentElement;
             iconParent.innerHTML=`<i class="ri-add-circle-line"></i>`
+            removeCartImgUrl(iconParent.parentElement.children[0].src)
 
         }
         iconParent.classList.remove("hide-icon")
