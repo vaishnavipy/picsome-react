@@ -4,7 +4,7 @@ import {useState} from "react"
 
 function ImageDiv(props){
 
-    const [cartImgUrl,setCartImgUrl] = useState("");
+  
   
     const ImgContext = React.createContext();
 
@@ -48,12 +48,7 @@ function ImageDiv(props){
                   }
                
           }
-          function handleAddToCart(imageUrl){
-
-
-            setCartImgUrl(imageUrl)
-            
-          }
+          
       
    
      
@@ -63,7 +58,7 @@ function ImageDiv(props){
     return(
         <div className={props.class} onMouseOver={handleHover} onMouseOut={handleOut}> 
            
-                <Image image={props.image} handleAddToCart={handleAddToCart} />
+                <Image image={props.image}  />
           
 
             </div> 
